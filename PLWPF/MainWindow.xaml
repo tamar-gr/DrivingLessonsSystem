@@ -1,0 +1,24 @@
+﻿<Window x:Class="PLWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Menu" Height="542" Width="943" Background="Gainsboro">
+    <Grid Margin="0,0,3.333,2.667">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="89*"/>
+        </Grid.RowDefinitions>
+
+        <Image Margin="-56,0,-52.333,0" Source="forMainWindow.jpg" Stretch="Fill" Grid.RowSpan="2"/>
+        <Button x:Name="btnTesters"  Content="Testers" VerticalAlignment="Top" Height="46" FontSize="15" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FF0C0A00" Click="BtnTesters_Click"  Margin="342,9,334.667,0" BorderBrush="#FF0C0A00" Background="#FFFFDC00" Grid.Row="1" Width="260"/>
+        <Button x:Name="btnTests"  Content="Tests" HorizontalAlignment="Left" Margin="342,120.8,0,0" VerticalAlignment="Top" Width="255" Height="46" FontSize="15" FontFamily="Tahoma" Background="#FFFFDC00" Foreground="#FF0F0101"  Click="BtnTests_Click" BorderBrush="#FF0F0101" Grid.Row="1" RenderTransformOrigin="0.278,-0.243" FontWeight="Bold"/>
+        <Button x:Name="btnTrainees" Content="Trainees" FontWeight="Bold" HorizontalAlignment="Left" Margin="342,65.8,0,0" VerticalAlignment="Top" Width="255" Height="46" FontSize="15" FontFamily="Tahoma" Background="#FFFFDC00"  Foreground="#FF0E0808" Click="BtnTrainees_Click" BorderBrush="#FF0E0808" Grid.Row="1" RenderTransformOrigin="0.506,0.133"/>
+
+        <Label Content="welcome!" HorizontalAlignment="Left" Margin="384,25,0,0" VerticalAlignment="Top" Width="155" Height="59" FontFamily="Tahoma" FontWeight="Bold" FontSize="30"/>
+        <Button x:Name="Findid" Content="Find by ID" HorizontalAlignment="Left" Margin="342,180,0,0"  VerticalAlignment="Top" Height="46" Width="255" Background="#FFFFDC00" Click="BtnFindID_Click" RenderTransformOrigin="0.5,0.5" Grid.Row="1" FontSize="15" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

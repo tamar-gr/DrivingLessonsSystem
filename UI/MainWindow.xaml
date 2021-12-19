@@ -1,0 +1,45 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="516*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnAddTester" Content="Add Tester" HorizontalAlignment="Left" Height="20" Margin="222.4,15,0,0" VerticalAlignment="Top" Width="118" Click="btnAddTester_Click" Background="Gray" Grid.Column="1"/>
+        <Button x:Name="btnAddTrainee" Content="Add Trainee" HorizontalAlignment="Left" Height="21" Margin="222.4,40,0,0" VerticalAlignment="Top" Width="118" Background="Gray" Click="btnAddTrainee_Click" Grid.Column="1"/>
+        <Button x:Name="btnAddTest" Content="Add Test" HorizontalAlignment="Left" Height="19" Margin="222.4,66,0,0" VerticalAlignment="Top" Width="118" Click="btnAddTest_Click" Background="Gray" Grid.Column="1"/>
+        <Button x:Name="btnTraineeNumOfTests" Content="number tests of trainee" HorizontalAlignment="Left" Height="20" Margin="222,92,0,0" VerticalAlignment="Top" Width="131" Click="btnTraineeNumOfTests_Click" Background="Gray" Grid.Column="1"/>
+        <Button x:Name="btnRemoveTester" Content="Remove Tester" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="222.4,170,0,0" Background="Yellow" Grid.Column="1" Click="btnRemoveTester_Click"/>
+        <Button x:Name="btnRemoveTrainee" Content="Remove Trainee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="222.4,143,0,0" Background="Yellow" Height="21" Grid.Column="1" Click="btnRemoveTrainee_Click"/>
+        <Button x:Name="btnTestersByGearBox" Content="Find Testers By GearBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="202" Height="24" Background="Green" Click="btnTestersByGearBox_Click" Grid.Column="1"/>
+        <Button x:Name="btnpassed" Content="Check if the trainee passed the test" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,39,0,0" VerticalAlignment="Top" Width="202"  Background="Green" Click="btnpassed_Click"/>
+        <Button x:Name="btnGetTraineeBySchool" Content="Get Trainee By School" Grid.Column="1" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="202"  Background="Green" Click="btnGetTraineeBySchool_Click"/>
+        <Button x:Name="btnGetTraineeByTeacher" Content="Get Trainee By Teacher" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Background="Green" Grid.Column="1" Margin="10,92,0,0" Click="btnGetTraineeByTeacher_Click"/>
+        <Button x:Name="btnGetTraineesByNunOfTests" Content="Get Trainees By Number Of Tests" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Grid.Column="1" Margin="9,116,0,0" Background="Green" Click="btnGetTraineesByNunOfTests_Click" Height="24"/>
+        
+       
+        <Button x:Name="btnGetTesters" Content="Get all Testers" Grid.Column="1" HorizontalAlignment="Left" Margin="358.4,18,0,0" VerticalAlignment="Top" Background="Red" Width="132" Height="22" Click="btnGetTesters_Click"/>
+        <Button x:Name="btnGetTrainees" Content="Get all Trainees" Grid.Column="1" HorizontalAlignment="Left" Margin="358.4,47,0,0" VerticalAlignment="Top" Background="Red" Width="132" Height="22" Click="btnGetTrainees_Click"/>
+        <Button x:Name="btnGetTests" Content="Get all Tests" Grid.Column="1" HorizontalAlignment="Left" Margin="358.4,74,0,0" VerticalAlignment="Top" Background="Red" Width="132" Height="22" Click="btnGetTests_Click"/>
+        <Button x:Name="btnFindTests" Content="Find all tests by date (today)" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="511,18,0,0" VerticalAlignment="Top" Width="160" Background="Cyan" Click="btnFindTests_Click"/>
+        <Button x:Name="btnFindAvailbleTesters" Content="Find all availble testrs by date" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="505,55,0,0" VerticalAlignment="Top" Width="170" Background="Cyan" Click="btnFindAllAvailbleTestrs_Click"/>
+        <TextBox x:Name="txtFindTestersByDis" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="49,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtfindtestersbyadd" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="49,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnFindTestersByDis" Content="Find Testers By Dis" Grid.Column="1" HorizontalAlignment="Left" Margin="49,234,0,0" VerticalAlignment="Top" Width="120" Background="Green" Click="btnFindTestersByDis_Click" Height="24"/>
+        <Label x:Name="lblGeAllTestersByDis" Content=" Get all testers by distance" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="10,146,0,0" VerticalAlignment="Top" Width="200" Background="Green"/>
+        <Button x:Name="btnPrintTestersByGearbox" Content="Group Testers by gearbox" Grid.Column="1" HorizontalAlignment="Left" Margin="358,131,0,0" VerticalAlignment="Top" Width="211" Background="Navy" Height="22" Click="btnPrintTestersByGearbox_Click"/>
+        <Button x:Name="btnPrintTraineeBySchool" Content="Group trainees by school" Grid.Column="1" HorizontalAlignment="Left" Margin="358,160,0,0" VerticalAlignment="Top" Height="22" Background="Navy" Width="211" Click="btnPrintTraineeBySchool_Click"/>
+        <Button x:Name="btnPrintTraineeByTeacher" Content="Group trainees by teacher" Grid.Column="1" HorizontalAlignment="Left" Margin="358,187,0,0" VerticalAlignment="Top" Height="23" Background="Navy" Width="211" Click="btnPrintTraineeByTeacher_Click"/>
+        <Button x:Name="btnPrintTraineesByNunOfTests" Content="Group trainees by number of tests" Grid.Column="1" HorizontalAlignment="Left" Margin="358,215,0,0" VerticalAlignment="Top" Height="23" Background="Navy" Width="211" Click="btnPrintTraineesByNunOfTests_Click"/>
+        <TextBox x:Name="txtidlike" Grid.Column="1" HorizontalAlignment="Left" Margin="358,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="211"/>
+        <Label x:Name="label" Content="Hodaya and Ayelet"  Grid.Column="1" HorizontalAlignment="Left" Margin="452,274,0,0" VerticalAlignment="Top" Background="AliceBlue" FontSize="22" Width="190" FontStyle="Italic" />
+
+
+    </Grid>
+</Window>

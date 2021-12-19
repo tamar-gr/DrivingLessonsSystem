@@ -1,0 +1,54 @@
+﻿<Window x:Class="PLWPF.GroupTraineesByTester"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Group trainee" Height="415.318" Width="597.399">
+    <Window.Resources>
+        <Style x:Key="GroupHeaderStyle" TargetType="{x:Type GroupItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                        <Expander x:Name="exp" IsExpanded="True"
+                         Background="White"
+                         Foreground="Black">
+                            <Expander.Header>
+                                <TextBlock Text="{Binding NameOfTeacher}"/>
+                            </Expander.Header>
+                            <ItemsPresenter/>
+                        </Expander>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Grid">
+        <Button x:Name="btnBack" Background="White" HorizontalAlignment="Left" Margin="472,26,0,0" VerticalAlignment="Top" Width="57" Height="40" Foreground="#FFFDF7F7" BorderBrush="#FFFFFBFB" Click="btnBack_Click">
+        </Button>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="305" Margin="10,66,0,0" AutoGenerateColumns="False" IsReadOnly="True" FontFamily="Tahoma" FontSize="17" VerticalAlignment="Top" Width="571" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.GroupStyle>
+                <GroupStyle ContainerStyle="{StaticResource GroupHeaderStyle}">
+                    <GroupStyle.Panel>
+                        <ItemsPanelTemplate>
+                            <DataGridRowsPresenter/>
+                        </ItemsPanelTemplate>
+                    </GroupStyle.Panel>
+                </GroupStyle>
+            </DataGrid.GroupStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="First name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Teacher name" Binding="{Binding NameOfTeacher}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="56" Margin="20,22,0,0" TextWrapping="Wrap" Text="Group trainees by Teacher" VerticalAlignment="Top" Width="369" FontSize="22" FontWeight="Bold" FontFamily="Tahoma" Foreground="#FF1908B7"/>
+        <Button x:Name="btnBack_Copy"  Content="Back" Background="Gray" Margin="394,17,15.2,0" VerticalAlignment="Top" Width="Auto" Height="40" FontFamily="Tahoma" FontWeight="Bold" AutomationProperties.Name="f" Foreground="Black" FontSize="14" Click="btnBack_Click"/>
+    </Grid>
+</Window>
+<!--TextBlock Text="{Binding FirstName}"
+                                TextBlock Text="{Binding LastName}"/>-->

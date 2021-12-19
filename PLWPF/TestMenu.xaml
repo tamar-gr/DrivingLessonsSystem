@@ -1,0 +1,25 @@
+﻿<Window x:Class="PLWPF.TestMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="TestMenu" Height="552.66" Width="800">
+    <Grid Margin="0,0,-0.4,11.2">
+        <TextBox HorizontalAlignment="Left" Name="txtTestCode" Visibility="Hidden" Height="23" Margin="360,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelTestCode" Content="Enter Test code:" Visibility="Hidden"  HorizontalAlignment="Left" FontWeight="Bold" VerticalAlignment="Top" Margin="344,191,0,0" Width="148"/>
+        <Button Content="OK" Name="btnOKTestCode" HorizontalAlignment="Left" Visibility="Hidden"  Margin="380,269,0,0" Background="Gainsboro" FontFamily="Tahoma"  FontWeight="Bold" VerticalAlignment="Top" Width="75" Click="BtnOKTestCode_Click_1" />
+        <Button x:Name="btnAddTest" Content="Add Test"  FontWeight="Bold" HorizontalAlignment="Left" Margin="437,52,0,0" VerticalAlignment="Top" Width="189" Height="50" FontSize="15" FontFamily="Tahoma" Background="#FF2C5398"  Foreground="#FF0C0101" Click="btnAddTest_Click" BorderBrush="#FF09090B" />
+        <Button x:Name="btnUpdateTest" Content="Update Test" HorizontalAlignment="Left" Margin="437,111,0,0" VerticalAlignment="Top" Width="189" Height="50" FontSize="15" FontFamily="Tahoma" Background="#FF2681E4" FontWeight="Bold"  Foreground="#FF0C0101"  BorderBrush="#FF0C0101" Click="BtnUpdateTest_Click" RenderTransformOrigin="1.311,1.553"/>
+        <Button x:Name="btnRemoveTest" Content="Remove Test"  HorizontalAlignment="Left" Margin="437,171,0,0" VerticalAlignment="Top" Width="189" Height="50" FontSize="15" FontFamily="Tahoma" Background="#FFB1B7F6" FontWeight="Bold" Foreground="#FF0C0101" BorderBrush="#FF0C0101" Click="BtnUpdateTest_Click"/>
+        <Button x:Name="btnShowAll" Content="Show All Tests" FontWeight="Bold" HorizontalAlignment="Left" Margin="437,291,0,0" VerticalAlignment="Top" Width="189" Height="50" FontSize="15" FontFamily="Tahoma" Background="#FF6481B4"  Foreground="#FF0C0101" Click="btnShowAll_Click" BorderBrush="#FF09090B"  />
+        <Image HorizontalAlignment="Left" Height="339" Margin="0,187,0,-14" VerticalAlignment="Top" Width="324" Source="images.jpg"/>
+        <Label Content="Test Menu:" HorizontalAlignment="Left"   FontWeight="Bold" FontSize="18"  Margin="465,19,0,0" VerticalAlignment="Top" Width="121" Height="40"/>
+        <Button x:Name="btnMore" Content="More" Background="#FFCDDBF3" HorizontalAlignment="Left" FontWeight="Bold" Margin="437,352,0,0" VerticalAlignment="Top"   RenderTransformOrigin="1.162,2.473"  Width="189" Height="50" FontSize="15" FontFamily="Tahoma"  Foreground="#FF0C0C02"  BorderBrush="#FF0C0C02" Click="btnMore_Click"/>
+        <Image x:Name="back_button_png" Margin="0,403,697.6,24.2" Source="back-button.png" Stretch="Fill"/>
+        <Button x:Name="btnBack" FontWeight="Bold" HorizontalAlignment="Left" Margin="32,436,0,0" VerticalAlignment="Top" Width="40" Height="13" FontSize="9" FontFamily="Tahoma" Background="White"  Foreground="#FF0C0101" Content="Back "  Click="btnBack_Click" BorderBrush="#FFF0F0F0"  />
+        <Button x:Name="btnView" Content="View Test" FontWeight="Bold" HorizontalAlignment="Left" Margin="437,230,0,232" Width="189" FontSize="15" FontFamily="Tahoma" Background="#FF9EBEF5"  Foreground="#FF0C0101" Click="btnView_Click" Height="50" BorderBrush="#FF09090B"/>
+
+    </Grid>
+</Window>

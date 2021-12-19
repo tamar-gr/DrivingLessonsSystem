@@ -1,0 +1,50 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400.471" Width="705.733">
+    <Grid Margin="0,15,0,-15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="384*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnAddTester" Content="Add Tester" HorizontalAlignment="Left" Height="20" Margin="193,12,0,0" VerticalAlignment="Top" Width="118" Click="btnAddTester_Click" Background="Yellow" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnAddTrainee" Content="Add Trainee" HorizontalAlignment="Left" Height="21" Margin="193,37,0,0" VerticalAlignment="Top" Width="118" Background="Yellow" Click="btnAddTrainee_Click" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnAddTest" Content="Add Test" HorizontalAlignment="Left" Height="19" Margin="193,63,0,0" VerticalAlignment="Top" Width="118" Click="btnAddTest_Click" Background="Yellow" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnRemoveTest" Content="Remove Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="193,143,0,0" Background="Red" Grid.Column="1" Click="btnRemoveTest_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnRemoveTrainee" Content="Remove Trainee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="193,117,0,0" Background="Red" Height="21" Grid.Column="1" Click="btnRemoveTrainee_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnRemoveTester" Content="Remove Tester" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="193,89,0,0" Background="Red" Grid.Column="1" Click="btnRemoveTester_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnUpdateTester" Content="Update Tester" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Grid.Column="1" Background="Orange" Margin="193,170,0,0" Click="btnUpdateTester_Click_1" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnUpdateTrainee" Content="Update Trainee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Grid.Column="1" Background="Orange" Margin="193,197,0,0" Click="btnUpdateTrainee_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnUpdateTest" Content="Update Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Grid.Column="1" Background="Orange" Margin="193,222,0,0" Click="btnUpdateTest_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnGetTesters" Content="Get all Testers" Grid.Column="4" HorizontalAlignment="Left" Margin="27,12,0,0" VerticalAlignment="Top" Background="LightBlue" Width="132" Height="22" Click="btnGetTesters_Click"/>
+        <Button x:Name="btnallTestsAccrodingToDates" Content="Get all tests accroding to date" Grid.Column="4" HorizontalAlignment="Left" Margin="27,97,0,0" VerticalAlignment="Top" Background="LightBlue" Width="178" Height="22" Click="btnallTestsAccrodingToDate_Click"/>
+        <Button x:Name="btnGetTrainees" Content="Get all Trainees" Grid.Column="4" HorizontalAlignment="Left" Margin="27,42,0,0" VerticalAlignment="Top" Background="LightBlue" Width="132" Height="22" Click="btnGetTrainees_Click"/>
+        <Button x:Name="btnGetTests" Content="Get all Tests" Grid.Column="4" HorizontalAlignment="Left" Margin="27,69,0,0" VerticalAlignment="Top" Height="22" Background="LightBlue" Width="132" Click="btnGetTests_Click"/>
+        <Button x:Name="btTraineeNameOfteacer" Content="Group Trainees by teacer" HorizontalAlignment="Left" Height="25" Margin="0,79,0,0" VerticalAlignment="Top" Width="172" Background="#FFA4EE23" Click="btTraineeNameOfteacer_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btFindAllAvailbleTestrs" Content="Find all availble testers" HorizontalAlignment="Right" Height="25" Margin="0,10,74,0" VerticalAlignment="Top" Width="172" Background="#FFA4EE23" Click="btFindAllAvailbleTestrs_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btreturnTraineesByNumOfTests" Content="Group Trainees By Num Of Tests" HorizontalAlignment="Left" Height="25" Margin="0,147,0,0" VerticalAlignment="Top" Width="172" Background="#FFA4EE23" Click="btreturnTraineesByNumOfTests_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btreturnTestersByGearBox" Content="Group Testers By GearBox" HorizontalAlignment="Left" Height="25" Margin="0,44,0,0" VerticalAlignment="Top" Width="172" Background="#FFA4EE23" Click="btreturnTestersByGearBox_Click" RenderTransformOrigin="0.45,2.24" Grid.ColumnSpan="2"/>
+        <Button x:Name="btreturnTraineeBySchool" Content=" Group Trainees by School" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="0,113,0,0" VerticalAlignment="Top" Width="171" Background="#FFA4EE23" Click="btreturnTraineeBySchool_Click"/>
+        <Label x:Name="label" Content="Tamar and Abigail"  Grid.Column="4" HorizontalAlignment="Left" Margin="139,274,0,0" VerticalAlignment="Top" FontSize="22" Width="209" FontStyle="Italic" />
+        <Button x:Name="btnDislike" Content="Add Dislike" Grid.Column="4" HorizontalAlignment="Left" Margin="27,157,0,0" VerticalAlignment="Top" Background="Red" RenderTransformOrigin="-0.315,-0.228" Width="94" Click="btnDislike_Click"/>
+        <TextBox x:Name="txtidlike" Grid.Column="4" HorizontalAlignment="Left" Margin="45,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="211" TextChanged="txtidlike_TextChanged"/>
+        <Button x:Name="btnLike" Content="Add Like" Background="LimeGreen" Grid.Column="4" HorizontalAlignment="Left" Margin="126,157,0,0" VerticalAlignment="Top" Width="94" Click="btnLike_Click"/>
+        <Button x:Name="btnFindTestersByDis" Content="Find Testers By Dis" Grid.Column="4" HorizontalAlignment="Left" Margin="232,125,0,0" VerticalAlignment="Top" Width="120" Background="Green" Click="btnFindTestersByDis_Click" Height="24"/>
+        <Label x:Name="lblGeAllTestersByDis" Content=" Get all testers by distance" Grid.Column="4" HorizontalAlignment="Left" Height="25" Margin="27,124,0,0" VerticalAlignment="Top" Width="200" Background="Green"/>
+        <Button x:Name="btnTraineeNumOfTests" Content="number trainee's tests" Height="20" Margin="27,182,226,0" VerticalAlignment="Top" Click="btnTraineeNumOfTests_Click" Background="LightYellow" Grid.Column="4"/>
+        <TextBox x:Name="txtFindTestersByDis" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="49,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtfindtestersbyadd" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="49,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btreturnTestByCondition" Content="Test by condition" HorizontalAlignment="Left" Height="25" Margin="0,177,0,0" VerticalAlignment="Top" Width="172" Background="#FFA4EE23" Click="btreturnTestByCondition_Click" RenderTransformOrigin="0.45,2.24" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblfind" Content="Find object with Id" Grid.Column="4" HorizontalAlignment="Left" Height="28" Margin="198,18,0,0" VerticalAlignment="Top" Width="150" Background="#FFEDA4A4"/>
+        <TextBox x:Name="txtFind" Grid.Column="4" HorizontalAlignment="Left" Height="22" Margin="198,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" TextChanged="txtFind_TextChanged"/>
+        <Button x:Name="btnGetSuccessTraineesDay" Content="all the success trainees" Grid.Column="1" HorizontalAlignment="Left" Margin="10,259,0,0"  VerticalAlignment="Top" Height="20" Width="211" Background="Purple" Click="BtnGetSuccessTraineesDay_Click"/>
+        <Button x:Name="btnFind" Content="Find" Grid.Column="4" HorizontalAlignment="Left" Height="28" Margin="229,77,0,0" VerticalAlignment="Top" Width="84" Background="#FFF3AEAE" Click="btnFind_Click"/>
+    </Grid>
+</Window>

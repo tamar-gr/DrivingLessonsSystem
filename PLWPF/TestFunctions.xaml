@@ -1,0 +1,19 @@
+﻿<Window x:Class="PLWPF.TestFunctions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="TestFunctions" Height="450" Width="800">
+    <Grid Background="#FFF6F6F6">
+        <Button x:Name="btnFindTests" Content="Find all tests by date (today)" HorizontalAlignment="Left" Height="40" Margin="81,155,0,0" VerticalAlignment="Top" Width="228" Background="LightBlue" Click="btnFindTests_Click" RenderTransformOrigin="0.436,-0.631"/>
+        <Image x:Name="back_button_png" Margin="25,288,664.6,30" Source="back-button.png" Stretch="Fill"/>
+        <Button x:Name="btnBack_Copy" FontWeight="Bold" HorizontalAlignment="Left" Margin="62,329,0,0" VerticalAlignment="Top" Width="44" Height="15" FontSize="9" FontFamily="Tahoma" Background="White"  Foreground="#FF0C0101" Click="btnBack_Click" Content="Back" BorderBrush="White" />
+        <Image Margin="319,64,10,10" Source="tester.jpg" Stretch="Fill"/>
+        <DatePicker x:Name="DateofTest" HorizontalAlignment="Left" Margin="81,105,0,0" VerticalAlignment="Top" Width="228" Height="45"/>
+        <TextBox x:Name="txtHour" HorizontalAlignment="Left" Height="39" Margin="189,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtHour_TextChanged"/>
+        <Label x:Name="lblhour" FontSize="18" FontFamily="Tahoma" Background="Gainsboro" FontWeight="Bold" Content="Hour:" HorizontalAlignment="Left" Margin="81,61,0,0" VerticalAlignment="Top" Width="68" Height="39"/>
+   
+    </Grid>
+</Window>
